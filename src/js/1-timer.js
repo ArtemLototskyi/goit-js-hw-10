@@ -50,6 +50,13 @@ function handleStart() {
         
        if (deltaTime <= 0) {
            clearInterval(intervalID);
+
+           markupTimer({
+               days: 0,
+               hours: 0,
+               minutes: 0,
+               seconds: 0,
+            }); 
             datetimePicker.disabled = false;
             iziToast.show({
                 message: 'What would you like to add?',
