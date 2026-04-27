@@ -13,7 +13,7 @@ const secondsFiled = document.querySelector("span[data-seconds]");
 
 startBtn.addEventListener("click", handleStart);
 
-startBtn.disabled = false;
+startBtn.disabled = true;
 let userSelectedDate = null;
 let intervalID = null;
 
@@ -29,7 +29,7 @@ flatpickr(datetimePicker, {
         
         if (userSelectedDate <= currentDate) {
             iziToast.show({
-                message: 'What would you like to add?',
+                message: 'Please choose a date in the future',
                 color: 'red',
                 position: 'topRight',
             });
